@@ -15,7 +15,7 @@ AppProvider.instance.syncDatabase();
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Your frontend's URL
+    origin: "https://news-frontend-q3rr.onrender.com", // Your frontend's URL
     credentials: true, // Allow cookies and credentials
   })
 );

@@ -7,11 +7,6 @@ const { methodOverride } = require("./middlewares/methodOverride");
 const cors = require("cors");
 const session = require("express-session");
 const app = express();
-// const Admin = require("./models/admin");
-// const User = require("./models/user");
-
-// console.log(Admin);
-// console.log(User);
 
 AppProvider.instance.app = app; //after singleton
 AppProvider.instance.syncDatabase();
@@ -51,12 +46,6 @@ app.use(express.static("public"));
 app.use(methodOverride);
 app.use(withSessionHandler);
 app.use(sessionErorrs);
-
-// Creating a Date object
-// const dateObj = new Date();
-// Printing the date and time parts
-// console.log(`Date: ${dateObj.toDateString()}`);
-// console.log(`Time: ${dateObj.toTimeString()}`);
 
 app.use("/cms", usersRouter);
 

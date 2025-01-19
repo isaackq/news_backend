@@ -67,6 +67,8 @@ exports.store = async (req, res, next) => {
   if (error.isEmpty()) {
     try {
       let result = await News.create(req.body); //صح بس  الباسورد لازمها تشفير
+      console.log(result);
+      
         res.status(201).send({ status: true, message:"Created Successfully" })
         // : res.with("message", "Created Successfully").redirect("/cms/news/create");
     } catch (error) {
